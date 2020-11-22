@@ -151,7 +151,7 @@ const photosUpload = {
 
         photoDiv.remove();
     },
-    removeOldPhoto() {
+    removeOldPhoto(event) {
         const photoDiv = event.target.parentNode;
         
         if (photoDiv.id) {

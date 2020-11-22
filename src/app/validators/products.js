@@ -17,11 +17,11 @@ async function put(req, res, next) {
     const keys = Object.keys(req.body);
 
     for (key of keys) {
-        if (req.body[key] == '')
+        if (req.body[key] == '' && key != 'removed_files')
             return res.send('Por favor, volte e preencha todos os campos!')
     };
-
-    if (req.files.length == 0) {
+    
+    if (req.body.removed_files.length >= req.body.files_length && req.files.length == 0) {
         return res.send('Por favor, envie ao menos uma imagem!');
     };
 

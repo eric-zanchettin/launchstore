@@ -44,6 +44,7 @@
                     </div>
                 {% endfor %}
                 <input type="hidden" name="removed_files" />
+                <input type="hidden" name="files_length" value="{{ product.files|length }}" />
             {% endif %}
         </div>
     </div>

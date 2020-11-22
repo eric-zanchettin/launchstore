@@ -110,7 +110,7 @@ module.exports = {
                 await Promise.all(removedFilesPromise);
             };
     
-            req.body.price = req.body.price.replace(/\D/g, '') / 100;
+            req.body.price = req.body.price.replace(/\D/g, '');
     
             if (req.body.old_price != req.body.price) {
                 const oldProduct = await Product.find(req.body.id);
